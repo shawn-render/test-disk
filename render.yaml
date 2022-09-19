@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: test-svc
+    env: ruby
+    plan: starter plus
+    autoDeploy: false
+    buildCommand: bundle install
+    startCommand: bundle exec ruby main.rb
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 10
